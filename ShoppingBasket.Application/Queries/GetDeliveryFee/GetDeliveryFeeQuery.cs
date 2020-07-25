@@ -11,11 +11,7 @@ namespace ShoppingBasket.Application.Queries.GetDeliveryFee
     {
         public decimal CartTotal { get; set; }
         public class Handler : IRequestHandler<GetDeliveryFeeQuery, decimal>
-        {
-            public Handler()
-            {
-            }
-            
+        {           
             public async Task<decimal> Handle(GetDeliveryFeeQuery request, CancellationToken cancellationToken)
             {
                 return request.CartTotal > 50 ? 20 : 10;

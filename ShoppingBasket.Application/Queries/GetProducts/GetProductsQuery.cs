@@ -11,10 +11,6 @@ namespace ShoppingBasket.Application.Queries.GetProducts
     {
         public class Handler : IRequestHandler<GetProductsQuery, List<ProductModel>>
         {
-            public Handler()
-            {
-            }
-            
             public async Task<List<ProductModel>> Handle(GetProductsQuery request, CancellationToken cancellationToken)
             {
                 return GetSampleProducts();
